@@ -1,0 +1,204 @@
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 7px;
+	padding: 42px 56px;
+	width: 970px;
+	height: 600px;
+	background: radial-gradient(
+		183.67% 150.63% at 5% 4%,
+		rgba(223, 220, 1, 1),
+		rgba(74, 57, 157, 1) 80%
+	);
+	justify-content: center;
+	align-items: center;
+	z-index: 1001;
+	box-sizing: border-box;
+}
+
+.popup-content {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-gap: 36px;
+	grid-template-rows: 50px repeat(5, 56px);
+	grid-template-columns: repeat(2, 1fr);
+	&__head {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		grid-row: 1/2;
+		grid-column: 1/3;
+	}
+	&__title {
+		display: inline-block;
+		font-family: $second-family;
+		font-weight: 700;
+		font-size: 30px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #2d2650;
+	}
+	& input,
+	textarea,
+	select {
+		border: 2px solid #9283db;
+		border-radius: 7px;
+		padding: 20px;
+		background: rgba(239, 226, 255, 0.2);
+		font-family: $first-family;
+		font-weight: 400;
+		font-size: 14px;
+		letter-spacing: 0.05em;
+		color: #000000;
+		&::placeholder {
+			color: #555454;
+		}
+	}
+	& select {
+		padding: 17px;
+	}
+	& svg {
+		path {
+			transition: fill-opacity 0.3s ease-in-out;
+		}
+
+		&:hover path {
+			fill-opacity: 1;
+		}
+		cursor: pointer;
+	}
+
+	&__fullname {
+		grid-row: 2/3;
+		grid-column: 1/2;
+	}
+	&__phone {
+		grid-row: 3/4;
+		grid-column: 1/2;
+	}
+	&__email {
+		grid-row: 4/5;
+		grid-column: 1/2;
+	}
+	&__service {
+		grid-row: 5/6;
+		grid-column: 1/2;
+	}
+	&__textarea {
+		grid-row: 2/6;
+		grid-column: 2/3;
+		resize: none;
+	}
+	&__btn {
+		grid-row: 6/7;
+		grid-column: 2/3;
+		justify-self: end;
+	}
+}
+
+.close-popup {
+	cursor: pointer;
+	justify-self: end;
+}
+
+form {
+	display: grid;
+	grid-gap: 10px;
+}
+
+.popup-content__select {
+	position: relative;
+}
+
+.popup-content__service {
+	appearance: none; /* Убираем стандартный стиль */
+	-webkit-appearance: none; /* Для Safari */
+	-moz-appearance: none; /* Для Firefox */
+	padding: 20px; /* Добавляем отступы */
+	width: 100%;
+	box-sizing: border-box;
+	& option {
+		border: 1px solid #999;
+		padding: 20px 20px 20px 20px;
+		background: rgba(255, 255, 255, 0.3);
+	}
+}
+
+.popup-content__select option[disabled][selected] {
+	color: #555454; /* Цвет текста для placeholder */
+}
+
+.popup-content__arrow {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	pointer-events: none;
+}
+
+@media (max-width: 1280px) {
+	.popup {
+		width: 100%;
+		height: auto;
+	}
+
+	.popup-content {
+		grid-template-rows: repeat(5, 40px) 120px 90px;
+		grid-template-columns: 1fr;
+		grid-gap: 24px;
+		&__fullname {
+			grid-row: 2/3;
+			grid-column: 1/3;
+		}
+		&__phone {
+			grid-row: 3/4;
+			grid-column: 1/3;
+		}
+		&__email {
+			grid-row: 4/5;
+			grid-column: 1/3;
+		}
+		&__select {
+			grid-row: 5/6;
+			grid-column: 1/3;
+		}
+		&__textarea {
+			grid-row: 6/7;
+			grid-column: 1/3;
+		}
+		&__btn {
+			grid-row: 7/8;
+			grid-column: 1/3;
+
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			row-gap: 18px;
+			width: 100%;
+			& a {
+				width: 100%;
+				text-align: left;
+			}
+		}
+		& select {
+			padding: 11px;
+		}
+		&__arrow {
+			top: 17px;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.popup {
+		padding: 24px 16px;
+	}
+	.popup-content__title {
+		font-size: 18px;
+	}
+}

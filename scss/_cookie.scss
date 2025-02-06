@@ -1,0 +1,50 @@
+// COOKIE
+
+.cookie-block {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	border-radius: 7px;
+	padding: 40px 56px;
+	width: 100%;
+	max-width: 582px;
+	height: 200px;
+	backdrop-filter: blur(20px);
+	box-shadow: 0 1px 24px -1px rgba(0, 0, 0, 0.1);
+	background: radial-gradient(99.18% 150.63% at 5% 4%,rgba(223, 220, 1, 0.8),rgba(74, 57, 157, 0.7) 100%);
+	
+	display: none;
+	flex-direction: row;
+	gap: 12px;
+
+	&__info {
+		max-width: 329px;
+	}
+
+	&__title {
+		margin-bottom: 22px;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		
+	}
+	&__text {
+		font-family: $second-family;
+		font-weight: 700;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+		color: #2d2650;
+		&_yellow {
+			color: #dfdc01;;
+		}
+	}
+	&__btn {
+		padding: 10px 40px;
+		width: 137px;
+		height: 42px;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+	}
+}

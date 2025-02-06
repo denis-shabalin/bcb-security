@@ -1,0 +1,120 @@
+// секция инструментов и технологий
+
+.tools {
+	&__main {
+		margin-bottom: 80px;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 110px;
+		&-item {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	}
+}
+
+.tool__item {
+	&-img {
+		width: 272px;
+		height: 272px;
+	}
+	&-information {
+		max-width: 650px;
+	}
+	&-title {
+		font-family: $second-family;
+		font-weight: 900;
+		font-size: 40px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #2d2650;
+		margin-bottom: 24px;
+	}
+	&-desc {
+		font-family: $first-family;
+		font-weight: 400;
+		font-size: 18px;
+		letter-spacing: 0.05em;
+		color: #2b2a28;
+		margin-bottom: 48px;
+	}
+	&-link {
+		font-family: $second-family;
+		font-weight: 700;
+		font-size: 25px;
+		letter-spacing: 0.05em;
+		color: #4a399d;
+		text-decoration: none;
+
+		display: inline-block;
+		padding: 10px 40px;
+		background: #dfdc01;
+		transition: transform 0.8s, box-shadow 0.8s;
+		width: 195px;
+		height: 48px;
+		box-sizing: border-box;
+		&:hover {
+			background:  #ebe965;
+			color: #4a399d;
+			border: 1px solid #4a399d;
+
+			transform: translate(-4px, -8px); 
+			box-shadow: 4px 4px 10px  #4a399d;
+		}
+		&:active {
+			color: #ebe965;
+			background: #2d2650;
+		}
+	}
+	
+}
+
+
+
+.swiper-tools__first {
+	width: 100%; // Занимает всю ширину экрана
+	height: 110px;
+	overflow: hidden; // Скрываем лишние элементы
+	margin-bottom: 152px;
+}
+
+.swiper-tools__second {
+	margin-bottom: 111px;
+	overflow: hidden; 
+}
+
+.swiper-wrapper {
+	display: flex; // Элементы в одну строку
+	align-items: center; // Центрируем элементы по вертикали
+}
+
+.swiper-slide__item {
+	flex: 0 0 auto; 
+	width: auto; 
+	margin-right: 144px; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Стили для SVG, если нужно
+.swiper-slide__first svg {
+	width: 100px; 
+	height: 100px;
+}
+
+
+@media (max-width: 1280px) {
+	.swiper-tools__first {
+		margin-bottom: 52px;
+	}
+	.tools {
+		&__list {
+			&-item {
+				gap: 20px;
+			}
+		}
+	}
+}

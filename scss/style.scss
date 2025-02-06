@@ -1,0 +1,94 @@
+@font-face {
+	font-family: 'Eboy-EXTAlpha';
+	src: url('../fonts/eboy-extalpha.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/eboy-extalpha.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */ url('../fonts/eboy-extalpha.woff2') format('woff2'),
+		/* Super Modern Browsers */ url('../fonts/eboy-extalpha.woff')
+			format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+			url('../fonts/eboy-extalpha.ttf') format('truetype'),
+		/* Safari, Android, iOS */ url('../fonts/eboy-extalpha.svg#eboy-extalpha')
+			format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+$first-family: 'PT Sans', sans-serif; // font-family
+$second-family: 'Handjet', sans-serif; //
+$third-family: 'Press Start 2P', sans-serif; //
+$fourth-family: 'Eboy-EXTAlpha', sans-serif; // font3
+
+body {
+	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1110px;
+	margin: 0 auto;
+}
+
+// заголовки разделов
+.section-title {
+	font-family: $second-family;
+	font-weight: 900;
+	font-size: 30px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #b1b3b3;
+	max-width: 700px;
+	margin-bottom: 56px;
+}
+
+// стрелка скролла
+#scroll-up {
+	position: fixed;
+	right: 50px;
+	bottom: 100px;
+	display: none;
+}
+#scroll-up img {
+	width: 100%; /* Ширина изображения */
+	height: auto;
+	transition: transform 0.5s ease;
+}
+#scroll-up:hover img {
+	transform: scale(1.2);
+}
+
+@import 'home';
+
+@import 'development';
+
+@import 'solutions';
+
+@import 'expertise';
+
+@import 'tools';
+
+@import 'partners';
+
+@import 'contact-form';
+
+@import 'footer';
+
+@import 'cookie';
+
+@import 'side-menu';
+
+@import 'popup';
+
+@media (max-width: 1280px) {
+	.container {
+		padding: 0 25px;
+	}
+	#scroll-up img {
+		display: none;
+	}
+	.section-title {
+		margin-bottom: 36px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 0 16px;
+	}
+}

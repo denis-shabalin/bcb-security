@@ -1,0 +1,143 @@
+.partners__main {
+	/* height: 1032px; */
+	position: relative;
+}
+
+.swiper-container {
+	&__partners {
+		overflow: hidden;
+		margin-bottom: 114px;
+	}
+}
+.partners__swiper-slide {
+	height: 154px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& img {
+		filter: grayscale(100%);
+	}
+}
+
+.partners-button-next,
+.partners-button-prev {
+	position: absolute;
+	top: 138px;
+	z-index: 10;
+	cursor: pointer;
+
+	& img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.partners-button-next {
+	right: -70px;
+}
+
+.partners-button-prev {
+	left: -70px;
+}
+
+.swiper-container__news {
+	overflow-x: hidden;
+	padding-top: 166px;
+	
+}
+
+
+.swiper-container__news {
+	overflow-x: hidden;
+	padding-top: 166px;
+}
+
+.section-news {
+	height: 100%;
+	height: 606px;
+	background-image: url(../img/bg-news.webp);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	margin-bottom: 80px;
+}
+
+.news-box {
+	&__slide {
+	border: 5px solid #f5f5f5;
+	border-radius: 14px;
+	max-width: 350px;
+	height: 270px;
+	background-image: url(../img/new-box-img.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 20px 30px;
+	}
+	&__data {
+	display: inline-block;
+	font-family: $first-family;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	color: #f5f5f5;
+	margin-bottom: 92px;
+	}
+	&__title {
+	font-family: $second-family;
+	font-weight: 700;
+	font-size: 20px;
+	letter-spacing: 0.05em;
+	color: #f5f5f5;
+	margin-bottom: 10px;
+	}
+	&__desc {
+	font-family: $first-family;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	color: #f5f5f5;
+	height: 58px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	}
+}
+
+.news-button-next,
+.news-button-prev {
+	position: absolute;
+	top: 277px;
+	z-index: 10;
+	cursor: pointer;
+
+	& img {
+	width: 100%;
+	height: 100%;
+	}
+}
+
+.news-button-next {
+	right: -70px;
+}
+
+.news-button-prev {
+	left: -70px;
+}
+
+
+@media (max-width: 1280px) {
+	.swiper-container__news {
+		overflow-x: visible;
+		padding-top: 100px;
+	}
+	.partners__swiper-slide {		
+		width: 120px;
+		height: 120px;
+		margin-right: 0;
+	}
+	.news-button-next, .news-button-prev, .partners-button-next, .partners-button-prev {
+		display: none;
+	}
+}	

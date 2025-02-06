@@ -1,0 +1,50 @@
+// секция
+.development {
+	padding-top: 100px;
+	&__main {
+		max-width: 700px;
+		border-left: 10px solid #2d2650;
+		margin-bottom: 80px;
+		&-desc {
+			font-family: $first-family;
+			font-weight: 400;
+			font-size: 18px;
+			letter-spacing: 0.05em;
+			color: #2b2a28;
+			padding-left: 32px;
+		}
+	}
+}
+
+// секция стадий
+.stages {
+	&__main {
+		margin-bottom: 80px;
+		&-image {
+			margin-bottom: 24px;
+		}
+		&-list {
+			display: flex;
+			flex-direction: row;
+			gap: 90px;
+		}
+		&-item {
+			max-width: 300px;
+		}
+		&-title {
+			font-family: $second-family;
+			font-weight: 700;
+			font-size: 25px;
+			letter-spacing: 0.05em;
+			color: #2d2650;
+		}
+		&-desc {
+			font-family: $first-family;
+			font-weight: 400;
+			font-size: 18px;
+			letter-spacing: 0.05em;
+			color: #2b2a28;
+			padding-left: 20px;
+		}
+	}
+}
